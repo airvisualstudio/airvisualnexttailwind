@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Cards from '../components/cards'
 import { Navbar } from '../components/navbar'
+import React from 'react';
+import Fade from 'react-reveal/Fade';
 
 export default function Home() {
   return (
@@ -14,12 +16,11 @@ export default function Home() {
       </Head>
       <Navbar></Navbar>
       <main className={styles.main}>
-        
         <div>
-            <div className="container flex px-6 py-4 mx-auto lg:h-128 lg:py-16">
+            <div className="container flex overflow-y-auto px-6 py-4 mx-auto lg:h-128 lg:py-16">
                 <div className="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
                     <div className="max-w-lg">
-                        <h1 className="text-3xl tracking-wide text-gray-800 lg:text-4xl">Set your title</h1>
+                        <Fade bottom><h1 className="text-3xl tracking-wide text-gray-800 lg:text-4xl">Set your title</h1></Fade>
                         <p className="mt-4 text-gray-300 text-gray-600">Lorem ipsum, dolor sit amet consectetur
                             adipisicing elit. Aut quia asperiores alias vero magnam recusandae adipisci ad vitae
                             laudantium quod rem voluptatem eos accusantium cumque.</p>
@@ -37,6 +38,7 @@ export default function Home() {
                 </div>
             </div>
         </div>
+        
 
         <p className={styles.description}>
           Get started by editing{' '}
